@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ButterfliesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Rotas para a listagem de borboletas
+
+Route:: get('/butterflies', [ButterfliesController::class, 'index'])->name('butterflies.index');
