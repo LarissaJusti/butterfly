@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nome');
-            $table->string('especies');
+            $table->string('especie');
             $table->integer('idade');
             $table->string('sexo');
             $table->string('cor');

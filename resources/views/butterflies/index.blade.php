@@ -27,7 +27,7 @@
                 @foreach ($butterflies as $butterfly)
                     <tr>
                         <td>{{ $butterfly->nome }}</td>
-                        <td>{{ $butterfly->especies }}</td>
+                        <td>{{ $butterfly->especie }}</td>
                         <td>{{ $butterfly->idade }}</td>
                         <td>{{ $butterfly->sexo }}</td>
                         <td>{{ $butterfly->cor }}</td>

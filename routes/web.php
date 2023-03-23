@@ -20,3 +20,15 @@ Route::get('/', function () {
 // Rotas para a listagem de borboletas
 
 Route:: get('/butterflies', [ButterfliesController::class, 'index'])->name('butterflies.index');
+
+Route:: get('/butterflies/novo', [ButterfliesController::class, 'create'])->name('butterflies.create');
+
+Route:: get('/butterflies/{butterfly}', [ButterfliesController::class, 'show'])->name('butterflies.show');
+
+Route:: get('/butterflies/{id}/edit', [ButterfliesController::class, 'edit'])->name('butterflies.edit');
+
+Route:: post('/butterflies', [ButterfliesController::class, 'store'])->name('butterflies.store');
+
+Route:: put('/butterflies/{id}', [ButterfliesController::class, 'update'])->name('butterflies.update');
+
+Route:: delete('/butterflies/{id}', [ButterfliesController::class, 'destroy'])->name('butterflies.destroy');

@@ -15,7 +15,7 @@ class Butterfly extends Model
     // Indica os campos que podem ser preenchidos pelo usuário
     protected $fillable = [
         'nome',
-        'especies',
+        'especie',
         'idade',
         'sexo',
         'cor',
