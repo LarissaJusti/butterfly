@@ -25,10 +25,10 @@ Route:: get('/butterflies/novo', [ButterfliesController::class, 'create'])->name
 
 Route:: get('/butterflies/{butterfly}', [ButterfliesController::class, 'show'])->name('butterflies.show');
 
-Route:: get('/butterflies/{id}/edit', [ButterfliesController::class, 'edit'])->name('butterflies.edit');
+Route:: get('/butterflies/{butterfly}/editar', [ButterfliesController::class, 'edit'])->name('butterflies.edit');
 
 Route:: post('/butterflies', [ButterfliesController::class, 'store'])->name('butterflies.store');
 
-Route:: put('/butterflies/{id}', [ButterfliesController::class, 'update'])->name('butterflies.update');
+Route:: put('/butterflies/{butterfly}', [ButterfliesController::class, 'update'])->name('butterflies.update');
 
-Route:: delete('/butterflies/{id}', [ButterfliesController::class, 'destroy'])->name('butterflies.destroy');
+Route:: delete('/butterflies/{butterfly}', [ButterfliesController::class, 'destroy'])->name('butterflies.destroy');

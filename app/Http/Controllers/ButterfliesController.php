@@ -39,19 +39,23 @@ class ButterfliesController extends Controller
         return view('butterflies.view', compact('butterfly'));
     }
 
-    public function edit($id)
+    public function edit($butterfly)
     {
-        //
+        return view('butterlies.edit', compact('butterfly'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $requisicao, Butterfly $butterfly)
     {
-        //
+        $butterfly->update($requisicao->all());
+
+        return redirect()->route('butterflies.show', $butterfly->id);
     }
 
-    public function destroy($id)
+    public function destroy(Butterfly $butterfly)
     {
+        $butterfly->delete();
 
+        return redirect()->route('butterflies.index');
     }
 }
 

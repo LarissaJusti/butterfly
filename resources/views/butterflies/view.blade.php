@@ -27,6 +27,13 @@
             </p>
 
             <a href="{{ route('butterflies.index') }}">Voltar a lista</a>
+            <a class="btn btn-warning" href="{{ route('butterflies.edit', $butterfly->id) }}">Editar</a>
+
+            <form method="POST" action="{{ route('butterflies.destroy', $butterfly->id) }}">
+                @csrf
+                @method('DELETE')
+
+                <input type="submit" value="Excluir Butterfly" class="btn btn-danger">
         </div>
     </body>
 </html>
